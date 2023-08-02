@@ -21,8 +21,7 @@ namespace MvcMovie.Controllers
             var Genrequery = from m in db.Movies orderby m.Genre select m.Genre;
             GenreList.AddRange(Genrequery.Distinct());
             ViewBag.movieGenre = new SelectList(GenreList);
-            //return View(db.Movies.ToList());
-           // string searchString = id;
+           
             var movies = from m in db.Movies
                          select m;
 
